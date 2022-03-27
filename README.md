@@ -3,7 +3,7 @@
 ## 🏁 Objetivo:
 
 - Usuário fazer um cadastro
-- Cadastro informando avatar, data nascimento, e-mail, senha
+- Cadastro informando nome, data nascimento, e-mail, senha
 - Após as validações sera enviado esse cadastro para **DevChat**
 
 ## 🛠️ Tecnologias:
@@ -33,3 +33,11 @@ Crie o banco de dados executando:
 `docker-compose run web rails db:create db:migrate`
 
 Nice! Agora seu aplicativo Rails deve estar disponível em localhost:3000.
+
+## TODO do projeto:
+
+[] Criacao do CRUD de User
+[] Instalar e configurar Devise
+[] Criar tela Welcome após criação do usuario
+[] Implementar Webhook
+
