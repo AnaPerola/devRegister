@@ -1,0 +1,11 @@
+<h1 class='title'>Usuário</h1>
+<p style='color: green'><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to 'Editar usuário', edit_user_path(@user) %> |
+  <%= link_to 'Voltar', users_path %>
+
+  <%= button_to 'Excluir usuário', @user, method: :delete %>
+</div>
