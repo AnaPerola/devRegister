@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%; 
+  }
+
+  @media (max-width: 720) {
+    font-size: 87.5%; 
+  }
+}
+
+.bd-navbar {
+  background-color: #563d7c !important;
+  min-height: 4rem;
+}
+
+.bd-footer {
+  background-color: #563d7c !important;
+}
