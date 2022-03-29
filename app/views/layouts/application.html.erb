@@ -18,10 +18,10 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Dev Register</a>
           <% if user_signed_in? %>
-            <a class="navbar-link btn btn-outline-danger" href="#">Logout</a>
+            <%= button_to "Sair", destroy_user_session_path, class: 'btn btn-danger', method: :delete  %>
           <% else %>  
-            <a class="navbar-link btn btn-outline-success" href="#">Cadastre-se</a>
-            <a class="navbar-link btn btn-outline-success" href="#">Login</a>
+            <a class="navbar-link btn btn-outline-success" href="/users/sign_up">Cadastre-se</a>
+            <a class="navbar-link btn btn-outline-success" href="/users/sign_in">Login</a>
           <% end %> 
         </div>
       </nav>
