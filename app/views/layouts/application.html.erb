@@ -17,6 +17,12 @@
       <nav class="navbar navbar-dark navbar-fixed-top bg-dark bd-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Dev Register</a>
+          <% if user_signed_in? %>
+            <%= button_to "Sair", destroy_user_session_path, class: 'btn btn-danger', method: :delete  %>
+          <% else %>  
+            <a class="navbar-link btn btn-outline-success" href="/users/sign_up">Cadastre-se</a>
+            <a class="navbar-link btn btn-outline-success" href="/users/sign_in">Login</a>
+          <% end %> 
         </div>
       </nav>
       <!-- Fixed navbar -->
@@ -24,6 +30,8 @@
   
     <main class="flex-shrink-0">
       <div class="container">
+        <p class='notice'><%= notice %></p>
+        <p class='alert'><%= alert %></p>
         <%= yield %>
       </div>
     </main>

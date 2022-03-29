@@ -32,12 +32,16 @@ Crie o banco de dados executando:
 
 `docker-compose run web rails db:create db:migrate`
 
-Nice! Agora seu aplicativo Rails deve estar disponível em localhost:3000.
+Nice! 
+Agora seu aplicativo Rails deve estar disponível em localhost:3000.
 
 ## TODO do projeto:
 
-[] Criacao do CRUD de User
-[] Instalar e configurar Devise
-[] Criar tela Welcome após criação do usuario
+[X] Criacao do CRUD de User
+[X] Criar tela Welcome após criação do usuario
+[X] Instalar e configurar Devise
+[] Implementar no heroku
 [] Implementar Webhook
 
+## Fluxo do projeto:
+[X] welcome -> Cadastrar ou fazer login -> Usuario -> Lista de usuarios
