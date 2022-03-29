@@ -1,17 +1,12 @@
-<div id="<%= dom_id user %>">
+<div id="<%= @user %>">
   <p>
     <strong>Nome:</strong>
-    <%= user.name %>
+    <%= @user.name %>
   </p>
 
   <p>
     <strong>E-mail:</strong>
-    <%= user.email %>
-  </p>
-
-  <p>
-    <strong>Password:</strong>
-    <%= user.password %>
+    <% <%= @user.email %>
   </p>
 
 </div>
