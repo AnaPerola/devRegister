@@ -1,6 +1,8 @@
 FROM ruby:3.0.3
 #Atualizando servidor e instalando pacotes necessarios
-RUN apt-get update -qq && apt-get install -y curl libpq-dev nodejs yarn postgresql-client && apt-get clean
+RUN apt-get update -qq \
+    && apt-get install -y curl build-essential apt-transport-https libpq-dev locales wget \
+    && apt-get clean
 
 #Diretorio onde irei trabalhar
 WORKDIR /www/devregister
