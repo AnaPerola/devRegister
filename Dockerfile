@@ -14,10 +14,6 @@ COPY . /www/devregister/
 
 RUN bundle install
 
-#Adicionando scripts para ser executado no start do container
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 #Configurando o processo principal para executar o projeto
