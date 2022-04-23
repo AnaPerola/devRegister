@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:12-alpine
     volumes:
-      - ./.docker/volumes/database:/var/lib/postgresql/data
+      - database:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=${PG_DATABASE}
       - POSTGRES_USER=${PG_USERNAME}
@@ -19,3 +19,6 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
+volumes:
+  database:
