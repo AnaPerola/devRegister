@@ -1,10 +1,15 @@
-<h1 class="title">Olá Usuário </h1>
-<table id="welcome">
-  <thead>
-    <tr>
-      <th>Seja bem vindo </th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+<% if current_user %>
+  <h1 class="title">Olá, <%= current_user.name.capitalize %></h1>
+  <link>
+<% else %>
+  <h1 class="title">Olá, me chamo Ana ;)</h1>
+  <p>
+    Registre-se e interaja conosco
+  </p>
+<% end %>
+
+<div id="welcome">
+  <p>
+    <strong>Seja muito bem-vindo(a)!</strong>
+  </p>
+</div>
