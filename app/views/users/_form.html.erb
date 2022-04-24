@@ -1,4 +1,5 @@
 <%= form_with(model: @user, class: 'w-50') do |f| %>
+  <%= render 'devise/shared/error_messages', resource: resource %>
   <% if @user.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -17,11 +18,19 @@
   </div>
   <div class='form-group'>
     <%= f.label :email %>
-    <%= f.text_field :email, class:'form-control'%>
+    <%= f.text_field :email, class:'form-control', autofocus: true, autocomplete: 'email', class:'form-control'%>
   </div>
   <div class='form-group'>
     <%= f.label :password %>
-    <%= f.text_field :password, class:'form-control' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> caractéres)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: 'new-password', class:'form-control' %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: 'new-password', class:'form-control' %>
   </div>
   <div class='form-group'>
     <%= f.label :birthday %>
@@ -30,6 +39,6 @@
   </div>
  
   <div class='form-group'>
-    <%= f.submit class: 'btn btn-primary p-2'%>
+    <%= f.submit 'Cadastre-se', class: 'btn btn-primary p-2'%>
   </div>
 <% end %>
