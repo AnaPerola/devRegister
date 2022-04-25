@@ -16,12 +16,19 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-dark navbar-fixed-top bg-dark bd-navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Dev Register</a>
+          <%= button_to root_path, method: :get, class: 'nav-brand btn btn-info' do %>
+            <i class="fa fa-user" aria-hidden="true"></i>
+          <% end %>
           <% if user_signed_in? %>
-            <%= button_to "Sair", destroy_user_session_path, class: 'btn btn-danger', method: :delete  %>
-          <% else %>  
-            <a class="navbar-link btn btn-outline-success" href="/users/sign_up">Cadastre-se</a>
-            <a class="navbar-link btn btn-outline-success" href="/users/sign_in">Login</a>
+            <div class="me-2">
+              <%= button_to "Sair", destroy_user_session_path, class: 'btn btn-danger', method: :delete  %>
+            <div>
+          <% else %>
+          <a class="navbar-brand" href="#">Dev Register</a>
+            <div class="me-2">
+              <a class="navbar-link btn btn-success" href="/users/sign_up">Cadastre-se</a>
+              <a class="navbar-link btn btn-success" href="/users/sign_in">Login</a>
+            </div>
           <% end %> 
         </div>
       </nav>
@@ -36,12 +43,5 @@
       </div>
     </main>
   
-    <footer class="footer mt-auto py-3 bg-dark bd-footer">
-      <!-- body footer -->
-      <div class="container">
-        <a class="text-muted" href="https://github.com/AnaPerola"><%= Time.now.year %> / Develop Ana Pérola</a>
-      </div>
-      <!-- body footer -->
-    </footer>    
   </body>
 </html>

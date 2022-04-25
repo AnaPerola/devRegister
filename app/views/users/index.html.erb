@@ -3,7 +3,10 @@
 <h1>Usuários</h1>
 <div id='users'>
   <% @users.each do |user| %>
-    <%= render user %>
+    <p>
+      <strong>E-mail:</strong>
+      <%= user.email %>
+    </p>
     <p>
       <%= link_to 'Visualizar usuário', user %>
     </p>
