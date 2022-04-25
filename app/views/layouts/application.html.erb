@@ -16,7 +16,7 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-dark navbar-fixed-top bg-dark bd-navbar">
         <div class="container-fluid">
-          <%= button_to root_path, method: :get, class: 'nav-brand btn btn-info' do %>
+          <%= button_to users_path, method: :get, class: 'nav-brand btn btn-info' do %>
             <i class="fa fa-user" aria-hidden="true"></i>
           <% end %>
           <% if user_signed_in? %>
