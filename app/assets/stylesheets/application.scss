@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 * {
   margin: 0;
   padding: 0;
@@ -34,3 +35,12 @@ html {
   background-color: #563d7c !important;
   min-height: 4rem;
 }
+
+.btn-info {
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #0c869f;
+  color: #fff;
+} 
